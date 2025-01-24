@@ -1,13 +1,15 @@
 def get_userpassword():
-    """
-    This function prompts the user to enter a password and checks if it matches the expected password.
-    If the password is correct, it prints "Access granted". Otherwise, it prints "Access denied".
-    
-    """
-    password = int(input("Enter your password: "))
-    if password == 12345:
-        print("Access granted")
-    else:
-        print("Access denied")
+    try:
 
+        user_password = (input("enter your password : "))
+        if user_password == 123456 :
+            print("access granted")
+        else :
+            print("access denied")
+    except ValueError :
+        print("invalid input, enter a valid password")
+    except Exception as e :
+        print("an error occurred :", e)
+        get_userpassword()
+        return user_password
 get_userpassword()
