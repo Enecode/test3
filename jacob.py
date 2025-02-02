@@ -15,3 +15,5 @@ get_userpassword()
 
 
 
+def add(a, b) :
+    return a + b
